@@ -1,0 +1,40 @@
+=How to submit a patch for the linux kernel=
+
+==Make your change==
+
+Your code change should meet the requirements in:
+Documentation/CodingStyle
+
+Trivial violations can be checked with
+scripts/checkpatch.pl
+You should be able to justify any violations left in the patch
+
+Your code should pass a sparse check cleanly.
+ * http://kernel.org/pub/software/devel/sparse/
+
+
+==Test your change==
+
+ * Your change should build cleanly:
+  # With all configurations of the Kernel area you are working on
+    # =y
+    # =n
+    # =m
+  # Cross compiled for some different architectures
+  # On allyesconfig, allnoconfig and allmodconfig
+
+==Create the patch==
+
+==test the patch==
+
+==test your mailer==
+
+==signed off by==
+
+==patch introduction==
+
+==who to send to==
+
+==what to do once your patch has been sent==
+
+==Links==
