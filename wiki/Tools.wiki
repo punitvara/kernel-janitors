@@ -1,0 +1,10 @@
+=Tools used in kernel development=
+
+==GCC==
+
+==Git==
+
+==Diff and Patch==
+
+==Quilt==
+
