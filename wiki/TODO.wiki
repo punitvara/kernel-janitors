@@ -1,32 +1,71 @@
-=Kernel Janitors TODO List=
+=Kernel Testing=
+
+This task is an important part of the kernel development process and does not require C programming skills. It is also a good place to start to learn about the kernel and the tools used to develop and mange it.
+
+==Compile the latest kernel release and test on yur home machine==
+ * http://linuxquality.sunsite.dk/articles/testsuites/
+ * http://sourceforge.net/projects/ltp/
+ * http://www.ibm.com/developerworks/linux/library/l-stress/index.html
+
+==Compile random .configs==
+Ramdom .configs are more likely to find bugs than the distribution .configs.
+
+Generate random .config's and compile. Boot on your machine if compatible, and test.
+When the kernel does not compile, or the testing shows problems, report them.
 
 
-==Kernel Testing==
+==Compile for multiple architectures==
+A little more obscure is cross compiling .random configs for multiple architectures.
 
-==Bug Hunting/Fixing==
 
-===Coverity defects===
+== Run linux next tree==
+Linux next is the tree that is built as a testbed for the *next* kernel release.
+This is the most likely place to find problems, and therefore is the most useful to test, and the most likely to break your machine.
+Git tree at:
+ * git://git.kernel.org/pub/scm/linux/kernel/git/sfr/linux-next.git
+Tar balls at:
+ * http://www.kernel.org/pub/linux/kernel/people/sfr/linux-next/
+
+
+=Bug Hunting/Fixing=
+
+This is the most usefull task a developer can do!
+Requires C programming skills, problem solving etc but is the most rewarding.
+Also it is a good way to get into the kernel and find out which area's interest you.
+
+==Coverity defects==
+Coverity is an advanced static analysis tool which regularly scans the linux kernel.
+It has a large database of suspect defects, and if you can read and write C code proficiently, this is a sure way to find a bug, send a fix in and get some of your code in the kernel  
  * http://scan.coverity.com/
 
-===Kernel Oops debugging===
+
+==Bugzilla==
+Bugzilla has a list of bug reports, find one you like, try to diagnose the problem, then look at the code and try to find the bug.
+ * http://bugzilla.kernel.org/
+
+==Kernel Oops debugging==
+A more chalenging task is to analyse kernel oop's data and diagnose the problem (and fix if able).
+This task is harder, but these bugs are not just theoretical, they are getting hit by real people. Also this is a good way for a skilled embedded C developer to learn a bit more about the lower level.
  * http://www.kerneloops.org/
  * http://kerneltrap.org/Linux/Decoding_Oops
  * http://kerneltrap.org/Linux/Further_Oops_Insights
 
-===Bugzilla===
- * http://bugzilla.kernel.org/
 
-==API conversions/removal==
+
+=API conversions/removal=
+
+API conversions sometimes take a *long* time in the linux kernel.
+Kernel Janitors can help out in this area, but often the low hanging fuit are quickly picked and only the more dificault conversions are left.
 
 ==request_firmware()==
 David Woodhouse is workig on getting drivers which load firmware into the device converted over to use request_firmware().
-get tree :
+git tree :
  * git.infradead.org/users/dwmw2/firmware-2.6.git 
 List of suspect drivers:
  * http://www.fsfla.org/svn/fsfla/software/linux-libre/scripts/deblob-2.6.25 
 
 
-===BKL removal===
+==BKL removal==
 Currently there is a large amount of effort being put into removing the BKL.
 See
  * http://kerneltrap.org/Linux/Removing_the_Big_Kernel_Lock
