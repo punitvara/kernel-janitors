@@ -2,20 +2,44 @@
 
 This task is an important part of the kernel development process and does not require C programming skills. It is also a good place to start to learn about the kernel and the tools used to develop and mange it.
 
-==Compile the latest kernel release and test on yur home machine==
+Once you have found a bug it is important to report it usefuly, see:
+ * /linux-2.6/REPORTING-BUGS
+ * http://www.chiark.greenend.org.uk/~sgtatham/bugs.html
+
+
+==Compile the latest kernel release and test on your home machine==
+
+To compile and boot a new kernel follow the instructions here :
+ * http://www.cyberciti.biz/tips/compiling-linux-kernel-26.html
+or more detailed instructions here:
+ * http://www.digitalhermit.com/linux/Kernel-Build-HOWTO.html
+
+Testing is kind of arbitry, you can test the kernel how you like. Just booting it on a large population of hardware is good. For information on more detailed testing and benchmarking see:
+
  * http://linuxquality.sunsite.dk/articles/testsuites/
  * http://sourceforge.net/projects/ltp/
  * http://www.ibm.com/developerworks/linux/library/l-stress/index.html
 
 ==Compile random .configs==
+
 Ramdom .configs are more likely to find bugs than the distribution .configs.
 
-Generate random .config's and compile. Boot on your machine if compatible, and test.
+Generate random .config's and compile. 
+
+{{{
+@ubuntu:~/linux-2.6$ make randconfig
+@ubuntu:~/linux-2.6$ make -j2 v=1
+}}}
+
+Boot on your machine if compatible, and test.
 When the kernel does not compile, or the testing shows problems, report them.
 
 
 ==Compile for multiple architectures==
-A little more obscure is cross compiling .random configs for multiple architectures.
+A little more obscure is cross compiling the latest kernel (perhaps even.random configs) for multiple architectures.
+To cross compile follow the instructions here :
+ * http://kernelnewbies.org/FAQ/KernelCrossCompilation
+ * http://wiki.ppckernel.org/w/Cross_compiling_a_64-bit_PowerPC_Linux_Kernel
 
 
 == Run linux next tree==
@@ -27,11 +51,15 @@ Tar balls at:
  * http://www.kernel.org/pub/linux/kernel/people/sfr/linux-next/
 
 
+
+
 =Bug Hunting/Fixing=
 
 This is the most usefull task a developer can do!
 Requires C programming skills, problem solving etc but is the most rewarding.
 Also it is a good way to get into the kernel and find out which area's interest you.
+General bug finding information:
+ * linux-2.6/Documentation/BUG-HUNTING
 
 ==Coverity defects==
 Coverity is an advanced static analysis tool which regularly scans the linux kernel.
@@ -45,10 +73,13 @@ Bugzilla has a list of bug reports, find one you like, try to diagnose the probl
 
 ==Kernel Oops debugging==
 A more chalenging task is to analyse kernel oop's data and diagnose the problem (and fix if able).
-This task is harder, but these bugs are not just theoretical, they are getting hit by real people. Also this is a good way for a skilled embedded C developer to learn a bit more about the lower level.
+This task is harder, but these bugs are not just theoretical, they are getting hit by real people. Also this is a good way for a skilled embedded C developer to learn a bit more about the lower level workings.
+
  * http://www.kerneloops.org/
+ * /linux-2.6/Documentation/oops-tracing.txt
  * http://kerneltrap.org/Linux/Decoding_Oops
  * http://kerneltrap.org/Linux/Further_Oops_Insights
+
 
 
 
@@ -62,7 +93,9 @@ David Woodhouse is workig on getting drivers which load firmware into the device
 git tree :
  * git.infradead.org/users/dwmw2/firmware-2.6.git 
 List of suspect drivers:
- * http://www.fsfla.org/svn/fsfla/software/linux-libre/scripts/deblob-2.6.25 
+ * http://www.fsfla.org/svn/fsfla/software/linux-libre/scripts/deblob-2.6.25
+Documentation:
+ * http://www.mjmwired.net/kernel/Documentation/firmware_class/
 
 
 ==BKL removal==
