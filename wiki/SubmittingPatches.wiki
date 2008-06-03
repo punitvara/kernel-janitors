@@ -1,5 +1,10 @@
 =How to submit a patch for the linux kernel=
 
+Read :
+ * /linux-2.6/Documentation/SubmittingPatches
+ * /linux-2.6/Documentation/SubmitChecklist
+
+
 ==Make your change==
 
 Your code change should meet the requirements in:
@@ -17,15 +22,33 @@ Your code should pass a sparse check cleanly.
 
  * Your change should build cleanly:
   # With all configurations of the Kernel area you are working on
-    # =y
-    # =n
-    # =m
+    # =y,n,m
   # Cross compiled for some different architectures
   # On allyesconfig, allnoconfig and allmodconfig
 
 ==Create the patch==
 
+{{{
+cd linux-2.6
+diff -up >../patches/MyNewPatch.txt
+}}}
+
+or using git
+
+{{{
+cd linux-2.6
+git diff >../patches/MyNewPatch.txt
+}}}
+
 ==test the patch==
+
+unpack a clean kernel and check your patch applies cleanly
+{{{
+mkdir linux-test
+cd linux-test
+git pull git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux-2.6.git
+patch -p0 ../patches/MyNewPatch.txt
+}}}
 
 ==test your mailer==
 
