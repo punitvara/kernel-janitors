@@ -5,6 +5,7 @@ This task is an important part of the kernel development process and does not re
 Once you have found a bug it is important to report it usefuly, see:
  * /linux-2.6/REPORTING-BUGS
  * http://www.chiark.greenend.org.uk/~sgtatham/bugs.html
+ * http://www.kerneloops.org/
 
 
 ==Compile the latest kernel release and test on your home machine==
@@ -14,7 +15,10 @@ To compile and boot a new kernel follow the instructions here :
 or more detailed instructions here:
  * http://www.digitalhermit.com/linux/Kernel-Build-HOWTO.html
 
-Testing is kind of arbitry, you can test the kernel how you like. Just booting it on a large population of hardware is good. For information on more detailed testing and benchmarking see:
+Testing is kind of arbitry, you can test the kernel how you like. Just booting it and making sure it runs on a large population of hardware is one of the best things a kernel janitor can do.
+
+
+For information on more detailed testing and benchmarking see:
 
  * http://linuxquality.sunsite.dk/articles/testsuites/
  * http://sourceforge.net/projects/ltp/
@@ -31,7 +35,7 @@ Generate random .config's and compile.
 @ubuntu:~/linux-2.6$ make -j2 v=1
 }}}
 
-Boot on your machine if compatible, and test.
+Boot on your machine if compatible, and test. (Requires knowledge of how .config works and what hardware you have on your system)
 When the kernel does not compile, or the testing shows problems, report them.
 
 
@@ -79,6 +83,7 @@ This task is harder, but these bugs are not just theoretical, they are getting h
  * /linux-2.6/Documentation/oops-tracing.txt
  * http://kerneltrap.org/Linux/Decoding_Oops
  * http://kerneltrap.org/Linux/Further_Oops_Insights
+ * http://kerneltrap.org/Linux/Tracking_Kernel_Oops
 
 
 
@@ -90,6 +95,10 @@ Kernel Janitors can help out in this area, but often the low hanging fuit are qu
 
 ==request_firmware()==
 David Woodhouse is workig on getting drivers which load firmware into the device converted over to use request_firmware().
+Initial patch:
+ * http://lwn.net/Articles/283759/
+Article:
+ * http://lwn.net/Articles/283492/
 git tree :
  * git.infradead.org/users/dwmw2/firmware-2.6.git 
 List of suspect drivers:
