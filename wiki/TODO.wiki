@@ -98,7 +98,7 @@ David Woodhouse is workig on getting drivers which load firmware into the device
 Initial patch:
  * http://lwn.net/Articles/283759/
 Article:
- * http://lwn.net/Articles/283492/
+ * http://lwn.net/Articles/284104/
 git tree :
  * git.infradead.org/users/dwmw2/firmware-2.6.git 
 List of suspect drivers:
@@ -111,8 +111,8 @@ Documentation:
 Currently there is a large amount of effort being put into removing the BKL.
 See
  * http://kerneltrap.org/Linux/Removing_the_Big_Kernel_Lock
- * http://lwn.net/Articles/281437/
- * http://lwn.net/Articles/282506/
+ * http://lwn.net/Articles/281938/
+ * http://lwn.net/Articles/283066/
 
 Ingo's "kill-the-BKL" tree:
  * git://git.kernel.org/pub/scm/linux/kernel/git/tip/linux-2.6-tip.git kill-the-BKL
