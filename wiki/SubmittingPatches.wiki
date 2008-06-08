@@ -51,6 +51,10 @@ patch -p0 ../patches/MyNewPatch.txt
 }}}
 
 ==test your mailer==
+Linux kernel patches are sent in emails as inline text, without MIME without attachments.
+Because of this the *most common errors* in a first patch are wrapping or whitespace error introduced by a mailer. So it is important to determine how to send a patch in this format correctly.
+To do this, simply mail the patch to yourself and apply it to a clean tree. (This is a simple but important step!)
+
 
 ==signed off by==
 
