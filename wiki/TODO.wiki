@@ -5,6 +5,8 @@ This task is an important part of the kernel development process and does not re
 Once you have found a bug it is important to report it usefuly, see:
  * /linux-2.6/REPORTING-BUGS
  * http://www.chiark.greenend.org.uk/~sgtatham/bugs.html
+
+Oops reporting tool @
  * http://www.kerneloops.org/
 
 
