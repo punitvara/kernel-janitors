@@ -67,6 +67,16 @@ Also it is a good way to get into the kernel and find out which area's interest 
 General bug finding information:
  * linux-2.6/Documentation/BUG-HUNTING
 
+
+== Linux-Staging Tree ==
+
+The linux staging tree is a tree for drivers, filesystems and other reasonable sized features that are not yet ready for mainline inclusion. This means that all the patches here are in need of work, including sparse fixes and cleanup type patches.
+
+ # http://kerneltrap.org/Linux/Introducing_the_Linux_Staging_Tree
+git tree at:
+ # git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging.git
+
+
 ==Coverity defects==
 Coverity is an advanced static analysis tool which regularly scans the linux kernel.
 It has a large database of suspect defects, and if you can read and write C code proficiently, this is a sure way to find a bug, send a fix in and get some of your code in the kernel  
@@ -88,9 +98,7 @@ This task is harder, but these bugs are not just theoretical, they are getting h
  * http://kerneltrap.org/Linux/Tracking_Kernel_Oops
 
 
-
-
-=API conversions/removal=
+=API conversions=
 
 API conversions sometimes take a *long* time in the linux kernel.
 Kernel Janitors can help out in this area, but often the low hanging fuit are quickly picked and only the more dificault conversions are left.
@@ -120,6 +128,8 @@ Ingo's "kill-the-BKL" tree:
  * git://git.kernel.org/pub/scm/linux/kernel/git/tip/linux-2.6-tip.git kill-the-BKL
 
 
+
+=API/Feature Removel=
 
 
 
