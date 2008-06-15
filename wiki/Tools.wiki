@@ -1,10 +1,48 @@
 =Tools used in kernel development=
 
-==GCC==
 
-==Git==
+==Build Tools==
+===GCC===
+ # http://www.faqs.org/docs/Linux-HOWTO/GCC-HOWTO.html
+ # http://gcc.gnu.org/
 
-==Diff and Patch==
+==Version Control & Patch Management==
 
-==Quilt==
+===Git===
+ # http://en.wikipedia.org/wiki/Git_(software)
+ # http://www.ibm.com/developerworks/linux/library/l-git/
+ # http://www.kernel.org/pub/software/scm/git/docs/user-manual.html
+ # http://eagain.net/articles/git-for-computer-scientists/
 
+List of git trees published at kernel.org
+ # http://git.kernel.org/
+
+===Diff and Patch===
+ # http://www.linuxforums.org/applications/using_diff_and_patch.html
+ # http://linux.die.net/man/1/patch
+
+===Quilt===
+ # http://savannah.nongnu.org/projects/quilt/
+
+==Tree Navigation==
+
+===CScope===
+ # http://cscope.sourceforge.net/
+
+===CTags===
+ # http://ctags.sourceforge.net/
+
+
+==Editors==
+
+===VIM===
+ # http://www.vim.org/docs.php
+
+===EMACS===
+ # http://www.linuxhelp.net/guides/emacs/
+
+===GEdit===
+ # http://linux.about.com/library/cmd/blcmdl1_gedit.htm
+
+===KEdit===
+ # http://linuxappfinder.com/package/kedit
