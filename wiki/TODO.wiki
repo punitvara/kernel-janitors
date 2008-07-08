@@ -92,7 +92,8 @@ A more chalenging task is to analyse kernel oop's data and diagnose the problem 
 This task is harder, but these bugs are not just theoretical, they are getting hit by real people. Also this is a good way for a skilled embedded C developer to learn a bit more about the lower level workings.
 
  * http://www.kerneloops.org/
- * /linux-2.6/Documentation/oops-tracing.txt
+ * linux-2.6/Documentation/oops-tracing.txt
+ * http://mail.nl.linux.org/kernelnewbies/2003-08/msg00347.html
  * http://kerneltrap.org/Linux/Decoding_Oops
  * http://kerneltrap.org/Linux/Further_Oops_Insights
  * http://kerneltrap.org/Linux/Tracking_Kernel_Oops
