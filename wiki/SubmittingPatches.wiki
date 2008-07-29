@@ -29,14 +29,14 @@ Your code should pass a sparse check cleanly.
 ==Create the patch==
 
 {{{
-cd linux-2.6
+cd linux-next
 diff -up >../patches/MyNewPatch.txt
 }}}
 
 or using git
 
 {{{
-cd linux-2.6
+cd linux-next
 git diff >../patches/MyNewPatch.txt
 }}}
 
@@ -44,9 +44,8 @@ git diff >../patches/MyNewPatch.txt
 
 unpack a clean kernel and check your patch applies cleanly
 {{{
-mkdir linux-test
-cd linux-test
-git pull git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux-2.6.git
+mkdir linux-next
+git-checkout -f
 patch -p0 ../patches/MyNewPatch.txt
 }}}
 
