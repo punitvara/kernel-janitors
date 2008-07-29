@@ -9,7 +9,7 @@
 ==Version Control & Patch Management==
 
 ===Git===
- # "http://en.wikipedia.org/wiki/Git_(software)"
+ # [http://en.wikipedia.org/wiki/Git_(software) Wikipedia Page]
  # http://www.ibm.com/developerworks/linux/library/l-git/
  # http://www.kernel.org/pub/software/scm/git/docs/user-manual.html
  # http://eagain.net/articles/git-for-computer-scientists/
