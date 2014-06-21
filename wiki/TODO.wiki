@@ -118,18 +118,6 @@ Documentation:
  * http://www.mjmwired.net/kernel/Documentation/firmware_class/
 
 
-==BKL removal==
-Currently there is a large amount of effort being put into removing the BKL.
-See
- * http://lkml.org/lkml/2008/1/8/213
- * http://kerneltrap.org/Linux/Removing_the_Big_Kernel_Lock
- * http://lwn.net/Articles/281938/
- * http://lwn.net/Articles/283066/
-
-Ingo's "kill-the-BKL" tree:
- * git://git.kernel.org/pub/scm/linux/kernel/git/tip/linux-2.6-tip.git kill-the-BKL
-
-
 
 =API/Feature Removel=
 
